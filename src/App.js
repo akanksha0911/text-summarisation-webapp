@@ -24,7 +24,7 @@ function App() {
 
     const [inputText, setInputText] = useState('Waiting for input....');
     const [summary, setSummary] = useState({});
-    const [rogueScore, setRogueScore] = useState({'test':2.1,'test2':2.3});
+    const [rogueScore, setRogueScore] = useState({});
     const [latestSummary, setLatestSummary] = useState('');
 
 

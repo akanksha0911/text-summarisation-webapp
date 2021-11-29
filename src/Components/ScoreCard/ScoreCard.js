@@ -3,45 +3,48 @@ import {useState} from "react";
 import styled from "styled-components";
 
 export default function ScoreCard(props) {
-    const [showCard, setShowCard] = useState(true);
-    const dataArray=[];
-    for (const key in props.rogueScore) {
-        dataArray[key]=props.rogueScore[key]
+    const [showCard, setShowCard] = useState(false);
+    const [bestModelName, setBestModelName] = useState('');
+    const [bestModelScore, setBestModelScore] = useState();
 
-    }
-    let durationBody = dataArray.map((item, i) => {
-        return (
-            <div key={i} value={item}>
-                {item}
-            </div>
-        );
-    });
     const StyledButton = styled.button`
       height: 80px;
       width: 400px;
     `
 
-    function calculateBest() {
-        console.log(Object.values(dataArray))
-
-        const max = 0;
-        for (const key in props.rogueScore) {
-            console.log(key)
-            console.log(props.rogueScore[key])
-        }
-    }
 
     return (<div style={{display: "inline-grid", height: "120px"}}>
         <StyledButton onClick={() => {
-            calculateBest()
-            setShowCard(true)
-        }}>Show Score card
+            setShowCard(!showCard)
+            let max = 0;
+            let model = ''
+            console.log(props.rogueScore)
+            for (const key in props.rogueScore) {
+                console.log(key)
+                if (props.rogueScore[key] > max) {
+                    max = props.rogueScore[key]
+                    model = key;
+                }
+            }
+            setBestModelName(model)
+            setBestModelScore(max)
+        }}>Show Rogue Score Board
         </StyledButton>
         {showCard && <div>
+            Extractive/Model Rogue =======> Value
+            <hr></hr>
+            {Object.keys(props.rogueScore)
+                .map((x, i) =>
+                    <div key={i}><b>{x}</b> =======> {props.rogueScore[x]}
+                        <hr></hr>
+                    </div>
+                )}
 
-ete
+            <b> Best Score</b>
+            <div>Model Name: {bestModelName}</div>
+            <div>Score: {bestModelScore}</div>
 
-            {durationBody}
+
         </div>}
     </div>)
 }
