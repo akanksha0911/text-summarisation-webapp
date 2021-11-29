@@ -30,6 +30,7 @@ export default function ScoreCard(props) {
             setBestModelScore(max)
         }}>Show Rogue Score Board
         </StyledButton>
+        <button onClick={() =>{window.print()}}> Print Score Card</button>
         {showCard && <div>
             Extractive/Model Rogue =======> Value
             <hr></hr>

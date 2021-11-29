@@ -1,3 +1,5 @@
+![Arch](https://user-images.githubusercontent.com/77387431/143853833-f97cb2ed-f92d-4d8e-824d-4d28896f2bbf.png)
+
 # Getting Started with text-summarisation-webapp 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
