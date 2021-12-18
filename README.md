@@ -1,3 +1,5 @@
+![Text-Summarization](https://github.com/akanksha0911/text-summarisation-webapp/blob/main/images/Text-Summarization.png)
+
 Description: It intends to provide concise, accurate, easy to read, and comprehensive summaries of lengthy audio files or text files that one can read within a few minutes.
 
 Reading a condensed summary of details from a long audio file/text file can give anyone a sense of what file focuses on or help catch up on hours’ worth of content in minutes.
